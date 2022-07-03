@@ -1,0 +1,184 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&display=swap');
+
+* {
+    margin: 0px;
+    padding: 0px;
+    font-family: 'DM Sans', sans-serif;
+    box-sizing: border-box;
+}
+
+.attribution {
+    position: relative;
+    font-size: 11px;
+    text-align: center;
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
+
+body {
+    max-width:100%;
+    height: 100vh;
+    background: hsl(27, 66%, 92%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+header {
+    width: 390px;
+    padding: 12px 25px;
+    border-radius: 15px;
+    margin-bottom: 20px;
+    background: hsl(10, 79%, 65%);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+header .balance {
+    line-height: 1.8;
+    color: white
+}
+
+header .logo {
+    position: relative;
+    top: 2px;
+}
+
+main {
+    width: 390px;
+    padding: 27px;
+    background: white;
+    border-radius: 15px;
+}
+
+main hr{
+    border-top: 1px solid hsla(28, 10%, 53%, .6);
+    border-left: none;
+    border-bottom: none;
+}
+
+footer{
+    position: absolute;
+    bottom: 0;
+}
+
+.main h2 {
+    margin-bottom: 20px;
+    color: hsl(25, 47%, 15%);
+}
+
+.main ul {
+    display: flex;
+    height: 170px;
+    justify-content: space-between;
+    margin-bottom: 25px;
+}
+
+.main ul li {
+    list-style: none;
+    width: 38px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    position: relative;
+}
+
+ul li .bar {
+    width: 100%;
+    position: absolute;
+    bottom: 22px;
+    border-radius: 5px;
+    transition: .3s;
+    cursor: pointer;
+}
+
+ul li .weekDay {
+    font-weight: 400;
+    font-size: .8rem;
+    color: hsl(28, 10%, 53%);
+}
+
+.main-foot {
+    margin-top: 25px;
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 10px;
+}
+
+.main-foot .footTxt1 h1{
+margin-top: 7px;
+margin-bottom: -8px;
+color: hsl(25, 47%, 15%);
+
+}
+
+.main-foot p {
+    color: hsl(28, 10%, 53%);
+    font-size: .8rem;
+}
+
+.main-foot .footTxt2{
+display: flex;
+flex-direction: column;
+justify-content:end;
+align-items: flex-end;
+color: hsl(25, 47%, 15%);
+}
+
+
+.normal{
+    background:hsl(10, 79%, 65%);
+}
+
+.normal:hover{
+    background: hsla(10, 79%, 65%, 0.6);
+}
+
+.max{
+    background: hsl(186, 34%, 60%);
+}
+
+.max:hover{
+    background: hsla(186, 34%, 60%, 0.6);
+
+}
+
+.info::before{
+    content: var(--content, auto);
+    font-size: 13px;
+    font-weight: 700;
+    color: hsl(0, 0%, 100%);
+    background: hsl(25, 47%, 15%);
+    position: relative;
+    bottom: 32px;
+    right: 7px;
+    padding: 6px;
+    border-radius: 4px;
+    visibility: hidden;
+}
+
+.info:hover::before{
+    visibility: visible;
+}
+
+@media (max-width: 450px){
+   body{
+    width: 100%;
+   }
+    header, main{
+        width: 340px;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+    .main ul li{
+        width: 33px;
+    }
+    .info::before{
+    font-size: 10px;
+    right: 5px;
+    }
+}
